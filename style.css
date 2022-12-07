@@ -1,0 +1,402 @@
+@import url('./src/fonts/stylesheet.css');
+
+* {
+  box-sizing: border-box;
+}
+
+/* @font-face {
+  font-family: 'Grtsk Giga';
+  src: url('./src/fonts/GrtskGiga-Bold.eot');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Grtsk Giga';
+  src: url('./src/fonts/GrtskGiga-Semibold.eot');
+  font-weight: 600;
+} */
+
+body {
+  margin: 0;
+  font-family: 'Grtsk Giga';
+  font-weight: 600;
+  overflow: hidden;
+
+}
+
+/* .section {
+  padding: 24px 0;
+} */
+
+.section--intro {
+  background-color: #BEBEBE;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.intro {
+  position: relative;
+  /* background-color: #BEBEBE; */
+  min-height: 100vh;
+  padding: 24px 0;
+}
+
+/* возможно это хедер */
+.intro__wrap {
+  display: flex;
+  /* justify-content: center; */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.intro__language {
+  position: relative;
+  /* display: inline-flex;
+  align-items: center; */
+  /* margin-top: 4px; */
+  /* display: inline-block; */
+  /* margin-right: calc(50% - 38px); */
+  /* margin-right: 45%; */
+  /* меняй это */
+  /* margin-right: 42%; */
+  /* min-width: 200px; */
+}
+
+/* .intro__language:hover {
+  background-color:red;
+} */
+
+/* оно не по очереди лезет а сразу */
+.intro__language:hover .intro__switcher {
+  left: 50px;
+  z-index: 0;
+  opacity: 1;
+  /* line-height: 36px; */
+  /* padding: 16px; */
+  /* transition: left 0.3s; */
+}
+
+.intro__language:hover .intro__switcher .intro__switch-link{
+  padding: 8px;
+}
+
+.intro__language:hover {
+  padding-right: 24px;
+}
+
+.intro__logo {
+  /* display: inline-block; */
+  /* position: absolute;
+  left: 50%;
+  top: 24px;
+  transform: translate(-50%, 0); */
+}
+
+/* можно его сделать обсоютным и он не будет занимать место */
+.intro__switcher {
+  position: absolute;
+  z-index: -1;
+  font-size: 12px;
+  /* transform: translateX(-80px); */
+  transform: translateY(-50%);
+  top: 50%;
+  width: 105px;
+  left: -100%;
+  opacity: 0;
+  transition: left 0.3s, opacity 0.3s;
+
+}
+
+.intro__switch-link {
+  text-decoration: none;
+}
+
+
+.intro__front {
+  position: relative;
+  margin-top: 72px;
+
+  text-align: center;
+}
+
+.intro__img {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.intro__img img {
+  filter: blur(38px);
+}
+
+.intro__title {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+
+  transform: translate(0, -50%);
+
+  width: 100%;
+  margin: 0;
+  font-size: 82px;
+  font-weight: 700;
+  line-height: 1.1;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #373737;
+}
+
+.intro__horizontal-link {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+
+  font-size: 16px;
+  line-height: 1.4;
+
+  text-decoration: none;
+
+  color: #373737;
+  transition: color 0.3s;
+
+}
+
+.intro__horizontal-link::after {
+  content: '';
+  width: 0px;
+  height: 1px;
+  background-color: white;
+  display: block;
+  transition: width 0.3s;
+}
+
+
+.intro__horizontal-link:hover::after{
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: white;
+}
+
+.intro__horizontal-link:hover {
+  color: white;
+}
+
+.intro__horizontal-link--left {
+  left: 0;
+
+
+  transform: rotate(-90deg) translateX(50%);
+}
+
+.intro__horizontal-link--right {
+  right: 0;
+
+  transform: rotate(90deg) translateX(-50%);
+}
+
+.intro__vertical-link {
+  position: absolute;
+  bottom: 24px;
+  /* display: inline-block; */
+  margin-left: 50%;
+  /* width: 100%; */
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.4;
+
+  /* text-align: center; */
+
+  color: #373737;
+
+  transform: translateX(-50%);
+
+  text-decoration: none;
+}
+
+.intro__vertical-link::after {
+  content: '';
+  width: 0px;
+  height: 1px;
+  background-color: white;
+  display: block;
+  transition: width 0.3s;
+}
+
+.intro__vertical-link:hover::after{
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: white;
+}
+
+.intro__vertical-link:hover {
+  color: white;
+}
+
+.intro__running-text {
+  /* position: absolute; */
+  top: 50%;
+  /* transform: translateY(-50%); */
+  /* transform: translate(-20%, -50%) rotate(-30deg); */
+  transform: translate(-20%, -190%) rotate(-30deg);
+
+  /* ноу врап не подходит так как тогда текст не двигается вместо с уженим экрана */
+  white-space: nowrap;
+}
+
+@keyframes runningText {
+  from {
+    transform: translate(0,0);
+  }
+
+  to {
+    transform: translate(-160%, 0);
+  }
+}
+
+.intro__text {
+  margin: 0;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 1.1;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  opacity: 0.1;
+
+  border: 1px solid #373737;
+  /* transform: rotate(-30deg); */
+
+}
+
+
+.intro__text--right {
+  /* margin-bottom: 16px; */
+  /* animation: runningText 5s infinite linear; */
+}
+
+.intro__text--left {
+  margin-bottom: 16px;
+  transform: rotate(180deg);
+  /* animation: runningText 5s infinite linear; */
+}
+
+svg {
+  /* position: absolute; */
+  fill: currentColor;
+  height: auto;
+  max-width: 66vmin;
+  transform-origin: center;
+  /* width: 66%; */
+  /* position: absolute; */
+  width: 118px;
+  /* transform: rotate(-90deg); */
+  /* у меня стартовое положение не такое как надо и тут ротетйт это фиксит но из за транзишена оно крутится после перезагрузки страницы */
+  /* transition: transform 3s; */
+  color: white;
+}
+
+.superSpiner {
+  position: absolute;
+  height: 118px;
+  bottom: 24px;
+  right: 24px;
+}
+
+.superSpiner:hover svg{
+  /* это оно но разко скидывает когда мышь увел и неясно должно ли оно плавно возвращатся или нет */
+  animation: spin 5s infinite linear;
+}
+
+.superSpiner::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 8px;
+  height: 8px;
+
+  background-color: black;
+
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* .intro__spiner {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  width: 8px;
+  height: 8px;
+
+  background-color: black;
+
+  border-radius: 50%;
+} */
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 16px;
+}
+
+/* @media (min-width: 768px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 32px;
+  }
+} */
+
+.grid__item--1-2 {
+  grid-column: 1 / 2;
+}
+
+.grid__item--1-6 {
+  grid-column: 1 / 7;
+}
+
+
+.grid__item--1-7 {
+  grid-column: 1 / 8;
+}
+
+.grid__item--7-8 {
+  grid-column: 7 / 8;
+}
+
+.grid__item--7-12 {
+  grid-column: 7 / 13;
+}
+
+.grid__item--8-12 {
+  grid-column: 8 / 13;
+}
+
+.grid__item--1-12 {
+  grid-column: 1 / 13;
+}
+
+
+
