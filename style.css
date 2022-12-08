@@ -158,7 +158,8 @@ body {
 
   width: 100%;
   margin: 0;
-  font-size: 82px;
+  /* font-size: 82px; */
+  font-size: 58px;
   font-weight: 700;
   line-height: 1.1;
 
@@ -166,6 +167,12 @@ body {
   text-transform: uppercase;
 
   color: #373737;
+}
+
+@media (min-width: 1024px) {
+  .intro__title {
+    font-size: 82px;
+  }
 }
 
 .intro__horizontal-link {
@@ -205,14 +212,16 @@ body {
 }
 
 .intro__horizontal-link--left {
-  left: 0;
+  /* left: 0; */
+  left: -24px;
 
 
   transform: rotate(-90deg) translateX(50%);
 }
 
 .intro__horizontal-link--right {
-  right: 0;
+  /* right: 0; */
+  right: -24px;
 
   transform: rotate(90deg) translateX(-50%);
 }
