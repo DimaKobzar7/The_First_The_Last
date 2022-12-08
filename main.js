@@ -66,37 +66,35 @@ spiner.addEventListener('mouseout', (event) => {
 });
 
 
+// это оно
 (function () {
 
-  const link = document.querySelector('main');
-  // const cursor = document.querySelector('.cursor');
+  const container = document.querySelector('main');
 
   const animateit = function (e) {
         const title = document.querySelector('.intro__title');
-        console.log(title);
-        const { offsetX: x, offsetY: y } = e,
-        { offsetWidth: width, offsetHeight: height } = this,
+        // console.log(e);
+        const { offsetX: x, offsetY: y } = e
+        // это значения мысоты и ширины main
+        const { offsetWidth: width, offsetHeight: height } = this;
 
-        move = 25,
-        xMove = x / width * (move * 2) - move,
-        yMove = y / height * (move * 2) - move;
+        let move = 25;
+        let xMove = x / width * (move * 2) - move;
+        let yMove = y / height * (move * 2) - move;
+        console.log(width,  height);
+        // move = 25,
+        // let xMove = x / width * (5 * 2) - 5;
+        // let yMove = y / height * (5 * 2) - 5;
 
         title.style.transform = `translate(${xMove}px, ${yMove}px)`;
 
-        if (e.type === 'mouseleave') {
-          title.style.transform = '';
-        }
+        // if (e.type === 'mouseleave') {
+        //   title.style.transform = '';
+        // }
   };
 
-  // const editCursor = e => {
-  //       const { clientX: x, clientY: y } = e;
-  //       cursor.style.left = x + 'px';
-  //       cursor.style.top = y + 'px';
-  // };
-
-  link.addEventListener('mousemove', animateit);
-  link.addEventListener('mouseleave', animateit);
-  // window.addEventListener('mousemove', editCursor);
+  container.addEventListener('mousemove', animateit);
+  container.addEventListener('mouseleave', animateit);
 
 })();
 
@@ -210,3 +208,38 @@ spiner.addEventListener('mouseout', (event) => {
 //     display: inline-block;
 //   }
 // }
+
+
+// document.addEventListener("mousemove", parallax);
+// function parallax(event) {
+//   this.querySelectorAll(".parallax-wrap span").forEach((shift) => {
+//     const position = shift.getAttribute("value");
+//     const x = (window.innerWidth - event.pageX * position) / 90;
+//     const y = (window.innerHeight - event.pageY * position) / 90;
+
+//     shift.style.transform = `translateX(${x}px) translateY(${y}px)`;
+//   });
+// }
+
+// document.addEventListener("mousemove", parallax);
+// function parallax(event) {
+//  let t = document.querySelector(".intro__title")
+
+
+//  .forEach((shift) => {
+//     const position = shift.getAttribute("value");
+//     const x = (window.innerWidth - event.pageX * position) / 90;
+//     const y = (window.innerHeight - event.pageY * position) / 90;
+
+//     shift.style.transform = `translateX(${x}px) translateY(${y}px)`;
+//   });
+// }
+
+{/* <div class="parallax-wrap">
+  <span value="-15"></span>
+  <span value="5"></span>
+  <span value="30"></span>
+  <span value="-5"></span>
+  <span value="15"></span>
+  <h2>Parallax effect</h2>
+</div> */}
