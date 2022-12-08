@@ -453,7 +453,28 @@ body {
     }
   }
 
-svg {
+
+.superSpiner {
+  position: absolute;
+  height: 90px;
+  bottom: 24px;
+  right: 24px;
+  transform: rotate(-90deg);
+}
+
+@media (min-width: 768px) {
+  .superSpiner {
+    height: 112px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .superSpiner {
+    height: 118px;
+  }
+}
+
+.superSpiner svg {
   /* position: absolute; */
   fill: currentColor;
   height: auto;
@@ -461,19 +482,23 @@ svg {
   transform-origin: center;
   /* width: 66%; */
   /* position: absolute; */
-  width: 118px;
+  width: 90px;
   /* transform: rotate(-90deg); */
   /* у меня стартовое положение не такое как надо и тут ротетйт это фиксит но из за транзишена оно крутится после перезагрузки страницы */
   /* transition: transform 3s; */
   color: white;
 }
 
-.superSpiner {
-  position: absolute;
-  height: 118px;
-  bottom: 24px;
-  right: 24px;
-  transform: rotate(-90deg);
+@media (min-width: 768px) {
+  .superSpiner svg {
+    width: 112px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .superSpiner svg {
+    width: 118px;
+  }
 }
 
 .superSpiner:hover svg{
