@@ -49,7 +49,7 @@ body {
 }
 
 /* возможно это хедер */
-.intro__wrap {
+.intro__header {
   display: flex;
   /* justify-content: center; */
   justify-content: space-between;
@@ -97,6 +97,18 @@ body {
   left: 50%;
   top: 24px;
   transform: translate(-50%, 0); */
+  animation: pageLoaded 5s forwards linear;
+  /* 5s infinite linear */
+}
+
+@keyframes pageLoaded {
+    from{
+
+    }
+
+    to {
+
+    }
 }
 
 /* можно его сделать обсоютным и он не будет занимать место */
@@ -128,6 +140,7 @@ body {
 
 .intro__img {
   position: relative;
+  z-index: 1;
   width: fit-content;
   margin: 0 auto;
 }
@@ -139,7 +152,7 @@ body {
 .intro__title {
   position: absolute;
   top: 50%;
-  z-index: 1;
+  z-index: 2;
 
   transform: translate(0, -50%);
 
@@ -157,7 +170,7 @@ body {
 
 .intro__horizontal-link {
   position: absolute;
-  z-index: 1;
+  z-index: 3;
   top: 50%;
 
   font-size: 16px;
@@ -245,23 +258,19 @@ body {
 
 .intro__running-text {
   /* position: absolute; */
-  top: 50%;
+  position: relative;
+  transform: rotate(-30deg);
+  top: -600px;
+  /* top: -650px; */
+  /* left: -385px; */
   /* transform: translateY(-50%); */
   /* transform: translate(-20%, -50%) rotate(-30deg); */
-  transform: translate(-20%, -190%) rotate(-30deg);
+  /* transform: translate(-20%, -190%) rotate(-30deg); */
 
   /* ноу врап не подходит так как тогда текст не двигается вместо с уженим экрана */
   white-space: nowrap;
-}
-
-@keyframes runningText {
-  from {
-    transform: translate(0,0);
-  }
-
-  to {
-    transform: translate(-160%, 0);
-  }
+  /* тут тоже текст не двигается */
+  /* width: max-content; */
 }
 
 .intro__text {
@@ -282,19 +291,51 @@ body {
   -webkit-text-stroke: 3px #373737;
   color: transparent;
 
+  white-space: nowrap;
+
 }
 
 
 .intro__text--right {
   /* margin-bottom: 16px; */
-  /* animation: runningText 5s infinite linear; */
+  /* padding-left: 100%; */
+  animation: runningTextUp 5s infinite linear;
 }
 
 .intro__text--left {
-  margin-bottom: 16px;
-  transform: rotate(180deg);
-  /* animation: runningText 5s infinite linear; */
+    padding-right: 100%;
+  /* margin-bottom: 16px; */
+  margin-top: 16px;
+  transform: rotate(180deg) translateX(-30%);
+  animation: runningTextDown 5s infinite linear;
+  /* animation: runningTextDown 3s linear 1s infinite running; */
+  /* backwards */
+  /* animation-fill-mode: backwards; */
 }
+
+@keyframes runningTextDown {
+    from {
+      transform: translate(0,0) rotate(180deg);
+    }
+
+    to {
+      transform: translate(-160%, 0) rotate(180deg);
+      /* не выезжяет плавно а сразу появляется */
+      /* transform: translate(-360%, 0) rotate(180deg); */
+    }
+  }
+
+  @keyframes runningTextUp {
+    from {
+      transform: translate(0,0);
+    }
+
+    to {
+      transform: translate(160%, 0) ;
+      /* не выезжяет плавно а сразу появляется */
+      /* transform: translate(-360%, 0) rotate(180deg); */
+    }
+  }
 
 svg {
   /* position: absolute; */
@@ -316,6 +357,7 @@ svg {
   height: 118px;
   bottom: 24px;
   right: 24px;
+  transform: rotate(-90deg);
 }
 
 .superSpiner:hover svg{
@@ -403,3 +445,29 @@ svg {
 .grid__item--1-12 {
   grid-column: 1 / 13;
 }
+
+
+.block{
+    height: 90px;
+    width:300px;
+    margin:0 auto;
+    background: #343436;
+  }
+  .block p{
+    text-align:center;
+    color:#fff;
+    text-transform: uppercase;
+    padding-top: 35px;
+    animation: text 5s infinite linear;
+    padding-left: 100%;
+    white-space: nowrap;
+  }
+  @keyframes text {
+    0%{
+      transform: translate(0, 0);
+    }
+
+    100%{
+      transform: translate(-160%, 0);
+    }
+  }
