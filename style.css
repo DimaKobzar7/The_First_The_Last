@@ -439,13 +439,13 @@ body {
 .intro__text--right {
   /* margin-bottom: 16px; */
   /* padding-left: 100%; */
-  padding-left: 4000px;
+  /* padding-left: 4000px; */
   animation: runningTextUp 5s infinite linear;
 }
 
 .intro__text--left {
   /* бред оно при изменении текста словается  */
-  padding-right: 4000px;
+  /* padding-right: 4000px; */
   /* margin-bottom: 16px; */
   /* margin-top: 16px; */
   transform: rotate(180deg) translateX(-30%);
@@ -469,11 +469,13 @@ body {
 
 @keyframes runningTextDown {
     from {
-      transform: translate(0,0) rotate(180deg);
+      /* transform: translate(0,0) rotate(180deg); */
+      transform: translate(200%,0) rotate(180deg);
     }
 
     to {
-      transform: translate(-160%, 0) rotate(180deg);
+      /* transform: translate(-160%, 0) rotate(180deg); */
+      transform: translate(-200%, 0) rotate(180deg);
       /* не выезжяет плавно а сразу появляется */
       /* transform: translate(-360%, 0) rotate(180deg); */
     }
@@ -481,11 +483,12 @@ body {
 
   @keyframes runningTextUp {
     from {
-      transform: translate(0,0);
+      /* transform: translate(0,0); */
+      transform: translate(-200%,0);
     }
 
     to {
-      transform: translate(160%, 0) ;
+      transform: translate(200%, 0) ;
       /* не выезжяет плавно а сразу появляется */
       /* transform: translate(-360%, 0) rotate(180deg); */
     }
