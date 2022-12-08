@@ -196,6 +196,20 @@ body {
 
 .intro__img img {
   filter: blur(38px);
+  height: 294px;
+
+}
+
+@media (min-width: 768px) {
+  .intro__img img {
+    height: 482px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .intro__img img {
+    height: auto;
+  }
 }
 
 .intro__title {
