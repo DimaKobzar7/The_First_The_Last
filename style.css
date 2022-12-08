@@ -179,6 +179,16 @@ body {
   text-decoration: none;
 }
 
+.intro__hamburger {
+  visibility: visible;
+  /* cursor: pointer; */
+}
+
+@media (min-width: 768px) {
+  .intro__hamburger {
+    visibility: hidden;
+  }
+}
 
 .intro__front {
   position: relative;
@@ -486,6 +496,7 @@ body {
   bottom: -20px;
   right: 40px;
   transform: rotate(-90deg);
+  /* transition: animation 3s; */
 }
 
 @media (min-width: 768px) {
@@ -515,6 +526,7 @@ body {
   /* у меня стартовое положение не такое как надо и тут ротетйт это фиксит но из за транзишена оно крутится после перезагрузки страницы */
   /* transition: transform 3s; */
   color: white;
+  /* transition: animation 3s; */
 }
 
 @media (min-width: 768px) {
