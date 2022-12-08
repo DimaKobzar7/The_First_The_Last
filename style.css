@@ -128,7 +128,7 @@ body {
 /* .intro__language:hover .intro__switcher .intro__switch-link {
   padding: 8px;
 } */
-/* 
+/*
 .intro__language:hover {
   padding-right: 24px;
 } */
@@ -163,14 +163,13 @@ body {
   opacity: 0;
   /* padding-left: 16px; */
   /* transition: left 5s, opacity 5s; */
-  transition: left 5s;
+  /* transition: left 5s, opacity, 5s; */
 }
 
 .intro__language:hover .intro__switch-link--RU {
   /* animation: ruLang 4s forwards linear; */
-  /* transition: left 35px; */
   left: 30px;
-  opacity: 1;
+  /* opacity: 1; */
   /* transition: left 10s opacity 10s; */
 }
 
@@ -186,29 +185,34 @@ body {
   }
 } */
 
- 
+
 .intro__switch-link--UA {
   /* transition: animation 6s; */
   opacity: 0;
   /* transition: left 5s; */
+  /* transition: left 10s, opacity 10s; */
+  /* transition: left 10s, opacity 10s; */
+}
+
+/* .testHover {
+  transition: left 10s, opacity 10s;
+} */
+
+/* .testHover {
+  transition: none;
+} */
+
+.testTransition {
   transition: left 10s, opacity 10s;
 }
 
 .intro__language:hover .intro__switch-link--UA {
   /* animation: uaLang 3s forwards linear; */
-  /* transition: left 75px; */
-  /* animation: ruLang 5s forwards linear; */
-  /* background-color: red; */
   left: 75px;
-  opacity: 1;
+  /* opacity: 1; */
   /* transition: left 5s; */
 }
 
-/* .intro__language:hover .intro__switch-link--UA .intro__switch-link--RU {
-  animation: uaLang 3s forwards linear;
-  animation: ruLang 5s forwards linear;
-  background-color: red;
-} */
 
 /* @keyframes uaLang {
   from {
