@@ -471,13 +471,15 @@ body {
 .superSpiner {
   position: absolute;
   height: 90px;
-  bottom: 24px;
-  right: 24px;
+  bottom: -20px;
+  right: 40px;
   transform: rotate(-90deg);
 }
 
 @media (min-width: 768px) {
   .superSpiner {
+    bottom: 24px;
+    right: 24px;
     height: 112px;
   }
 }
