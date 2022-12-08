@@ -377,11 +377,12 @@ body {
   /* width: max-content; */
 }
 
+
 .intro__text {
   margin: 0;
   font-style: italic;
   font-weight: 700;
-  font-size: 52px;
+  font-size: 28px;
   line-height: 1.1;
 
   text-align: center;
@@ -399,6 +400,17 @@ body {
 
 }
 
+@media (min-width: 768px) {
+  .intro__text {
+    font-size: 42px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .intro__text {
+    font-size: 52px;
+  }
+}
 
 .intro__text--right {
   /* margin-bottom: 16px; */
