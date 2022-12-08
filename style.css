@@ -93,13 +93,13 @@ body {
   }
 }
 
-.intro__language::after {
+/* .intro__language::after {
   content: "";
   position: absolute;
   width: 100px;
   height: 40px;
   z-index: -1;
-}
+} */
 
 .intro__language img {
   width: 34px;
@@ -154,7 +154,15 @@ body {
   left: 0;
   text-decoration: none;
   padding: 10px;
+  font-size: 14px;
+  color: #373737;
   /* z-index: -10; */
+}
+
+@media (min-width: 768px) {
+  .intro__switch-link {
+    font-size: 16px;
+  }
 }
 
 .intro__switch-link--RU {
