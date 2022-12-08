@@ -35,7 +35,13 @@ body {
 .container {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 16px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 24px;
+  }
 }
 
 .intro {
@@ -201,13 +207,21 @@ body {
 
     display: block;
 
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.4;
 
     text-decoration: none;
 
     color: #373737;
     transition: color 0.3s;
+
+  }
+}
+
+@media (min-width: 1440px) {
+  .intro__horizontal-link {
+
+    font-size: 16px;
 
   }
 }
@@ -249,22 +263,38 @@ body {
 }
 
 .intro__vertical-link {
-  position: absolute;
-  bottom: 24px;
-  /* display: inline-block; */
-  margin-left: 50%;
-  /* width: 100%; */
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 1.4;
+  display: none;
+}
 
-  /* text-align: center; */
+@media (min-width: 768px) {
+  .intro__vertical-link {
+    position: absolute;
+    bottom: 24px;
+    /* display: inline-block; */
+    display: block;
+    margin-left: 50%;
+    /* width: 100%; */
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.4;
 
-  color: #373737;
+    /* text-align: center; */
 
-  transform: translateX(-50%);
+    color: #373737;
 
-  text-decoration: none;
+    transform: translateX(-50%);
+
+    text-decoration: none;
+
+  }
+}
+
+@media (min-width: 1440px) {
+  .intro__vertical-link {
+
+    font-size: 16px;
+
+  }
 }
 
 .intro__vertical-link::after {
