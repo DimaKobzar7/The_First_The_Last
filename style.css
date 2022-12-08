@@ -41,6 +41,9 @@ body {
 .intro {
   position: relative;
   /* background-color: #BEBEBE; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   min-height: 100vh;
   padding: 24px 0;
 }
@@ -118,7 +121,7 @@ body {
 
 .intro__front {
   position: relative;
-  margin-top: 72px;
+  /* margin-top: 72px; */
 
   text-align: center;
 }
@@ -273,8 +276,11 @@ body {
 
   opacity: 0.1;
 
-  border: 1px solid #373737;
+  /* border: 1px solid #373737; */
   /* transform: rotate(-30deg); */
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 3px #373737;
+  color: transparent;
 
 }
 
@@ -397,6 +403,3 @@ svg {
 .grid__item--1-12 {
   grid-column: 1 / 13;
 }
-
-
-
