@@ -433,14 +433,26 @@ body {
 }
 
 .intro__text--left {
-    padding-right: 100%;
+    /* padding-right: 100%; */
   /* margin-bottom: 16px; */
-  margin-top: 16px;
+  /* margin-top: 16px; */
   transform: rotate(180deg) translateX(-30%);
   animation: runningTextDown 5s infinite linear;
   /* animation: runningTextDown 3s linear 1s infinite running; */
   /* backwards */
   /* animation-fill-mode: backwards; */
+}
+
+@media (min-width: 768px) {
+  .intro__text--left {
+    margin-bottom: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .intro__text--left {
+    margin-bottom: 36px;
+  }
 }
 
 @keyframes runningTextDown {
