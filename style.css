@@ -629,7 +629,12 @@ body {
   right: 40px;
   transform: rotate(-90deg);
   /* transition: animation 3s; */
+  /* transition: transform 3s; */
 }
+
+/* .superSpiner:hover {
+  animation: spin 5s infinite linear;
+} */
 
 @media (min-width: 768px) {
   .superSpiner {
@@ -674,8 +679,8 @@ body {
 }
 
 .superSpiner:hover svg{
-  /* это оно но разко скидывает когда мышь увел и неясно должно ли оно плавно возвращатся или нет */
-  animation: spin 5s infinite linear;
+  /* animation: spin 5s infinite linear; */
+  /* transition: transform 3s; */
 }
 
 .superSpiner::after {

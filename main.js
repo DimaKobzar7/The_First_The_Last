@@ -1,7 +1,9 @@
 const langIco = document.querySelector('.intro__language')
-const langLinks = document.querySelectorAll('.intro__switch-link')
+// const langLinks = document.querySelectorAll('.intro__switch-link')
 const rulang = document.querySelector('.intro__switch-link--RU')
 const uaLang = document.querySelector('.intro__switch-link--UA')
+const spiner = document.querySelector('.superSpiner')
+const spinerSvg =  document.querySelector('.superSpiner svg')
 
 langIco.addEventListener('mouseover', (event) => {
 
@@ -37,3 +39,28 @@ langIco.addEventListener('mouseout', (event) => {
 //     console.log(item);
 //   })
 // });
+
+// spiner.addEventListener('mouseover', (event) => {
+//   spiner.style.setProperty("transform", "rotate(-360deg)")
+//   spiner.style.setProperty("transition", "3s")
+
+// });
+
+
+// spiner.addEventListener('mouseout', (event) => {
+//   spiner.style.setProperty("transition", "transform 3s")
+// });
+
+
+spiner.addEventListener('mouseover', (event) => {
+  // spiner.style.setProperty("transform", "rotate(-360deg)")
+  // spiner.style.setProperty("transition", "transform 3s")
+  // spiner.style.setProperty("animation", "spin 5s infinite linear")
+  spinerSvg.style.setProperty("animation", "spin 5s infinite linear")
+});
+
+spiner.addEventListener('mouseout', (event) => {
+  // spiner.style.setProperty("transform", "rotate(-360deg)")
+  // spiner.style.setProperty("transition", "transform 3s")
+  spinerSvg.style.setProperty("animation", "spin 5s infinite linear paused")
+});
