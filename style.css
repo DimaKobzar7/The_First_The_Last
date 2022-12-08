@@ -439,11 +439,13 @@ body {
 .intro__text--right {
   /* margin-bottom: 16px; */
   /* padding-left: 100%; */
+  padding-left: 4000px;
   animation: runningTextUp 5s infinite linear;
 }
 
 .intro__text--left {
-    /* padding-right: 100%; */
+  /* бред оно при изменении текста словается  */
+  padding-right: 4000px;
   /* margin-bottom: 16px; */
   /* margin-top: 16px; */
   transform: rotate(180deg) translateX(-30%);
