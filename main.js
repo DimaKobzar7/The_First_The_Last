@@ -1,9 +1,8 @@
-const langIco = document.querySelector('.intro__language')
-// const langLinks = document.querySelectorAll('.intro__switch-link')
-const rulang = document.querySelector('.intro__switch-link--RU')
-const uaLang = document.querySelector('.intro__switch-link--UA')
-const spiner = document.querySelector('.superSpiner')
-const spinerSvg =  document.querySelector('.superSpiner svg')
+const langIco = document.querySelector('.header__language')
+const rulang = document.querySelector('.header__switch-link--RU')
+const uaLang = document.querySelector('.header__switch-link--UA')
+const spiner = document.querySelector('.spiner')
+const spinerSvg =  document.querySelector('.spiner svg')
 
 langIco.addEventListener('mouseover', (event) => {
 
@@ -67,7 +66,7 @@ spiner.addEventListener('mouseout', (event) => {
 
 
 // хотел отслеживать последнее изменение и если оно прыгент внезапно на 5 пунктов то оставить его таким как и было
-// этим я хотел предотвратит прыжки на спинере и бегущем тексте 
+// этим я хотел предотвратит прыжки на спинере и бегущем тексте
 let testx = 0;
 let testy = 0;
 // это оно

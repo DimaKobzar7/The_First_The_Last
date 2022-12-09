@@ -3,19 +3,6 @@
 * {
   box-sizing: border-box;
 }
-
-/* @font-face {
-  font-family: 'Grtsk Giga';
-  src: url('./src/fonts/GrtskGiga-Bold.eot');
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: 'Grtsk Giga';
-  src: url('./src/fonts/GrtskGiga-Semibold.eot');
-  font-weight: 600;
-} */
-
 body {
   margin: 0;
   font-family: 'Grtsk Giga';
@@ -24,18 +11,14 @@ body {
 
 }
 
-/* .section {
-  padding: 24px 0;
-} */
-
-.section--intro {
+.section {
   background-color: #BEBEBE;
 }
 
 .container {
-  max-width: 1440px;
   margin: 0 auto;
   padding: 0 16px;
+  max-width: 1440px;
 }
 
 @media (min-width: 768px) {
@@ -46,10 +29,11 @@ body {
 
 .intro {
   position: relative;
-  /* background-color: #BEBEBE; */
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
   min-height: 100vh;
   padding: 16px 0;
 }
@@ -60,96 +44,39 @@ body {
   }
 }
 
-/* возможно это хедер */
-.intro__header {
+.header {
   display: flex;
-  /* justify-content: center; */
   justify-content: space-between;
   align-items: center;
 }
 
-.intro__language {
+.header__language {
   position: relative;
-  /* display: inline-flex;
-  align-items: center; */
-  /* margin-top: 4px; */
-  /* display: inline-block; */
-  /* margin-right: calc(50% - 38px); */
-  /* margin-right: 45%; */
-  /* меняй это */
-  /* margin-right: 42%; */
-  /* min-width: 200px; */
   width: 34px;
   height: 34px;
-  /* transition: ruLang 6s; */
-  /* z-index: 12;
-  background-color: red */
 }
 
 @media (min-width: 1024px) {
-  .intro__language {
+  .header__language {
     width: 38px;
     height: 38px;
   }
 }
 
-/* .intro__language::after {
-  content: "";
-  position: absolute;
-  width: 100px;
-  height: 40px;
-  z-index: -1;
-} */
-
-.intro__language img {
+.header__language img {
   width: 34px;
   height: 34px;
 }
 
 
 @media (min-width: 1024px) {
-  .intro__language img {
+  .header__language img {
     width: 38px;
     height: 38px;
   }
 }
 
-
-/* оно не по очереди лезет а сразу */
-.intro__language:hover .intro__switcher {
-  left: 50px;
-  z-index: 0;
-  opacity: 1;
-  /* line-height: 36px; */
-  /* padding: 16px; */
-  /* transition: left 0.3s; */
-}
-
-/* .intro__language:hover .intro__switcher .intro__switch-link {
-  padding: 8px;
-} */
-/*
-.intro__language:hover {
-  padding-right: 24px;
-} */
-
-
-/* можно его сделать обсоютным и он не будет занимать место */
-.intro__switcher {
-  /* position: absolute; */
-  z-index: -1;
-  font-size: 12px;
-  /* transform: translateX(-80px); */
-  transform: translateY(-50%);
-  top: 50%;
-  width: 105px;
-  left: -100%;
-  /* opacity: 0; */
-  /* transition: left 0.3s, opacity 0.3s; */
-
-}
-
-.intro__switch-link {
+.header__switch-link {
   position: absolute;
   left: 0;
   text-decoration: none;
@@ -160,94 +87,32 @@ body {
 }
 
 @media (min-width: 768px) {
-  .intro__switch-link {
+  .header__switch-link {
     font-size: 16px;
   }
 }
 
-.intro__switch-link--RU {
-  /* background-color: red; */
-  /* animation: ruLang 5s forwards linear; */
+.header__switch-link--RU {
   opacity: 0;
-  /* padding-left: 16px; */
-  /* transition: left 5s, opacity 5s; */
-  /* transition: left 5s, opacity, 5s; */
 }
 
-.intro__language:hover .intro__switch-link--RU {
-  /* animation: ruLang 4s forwards linear; */
+.header__switch-link--UA {
+  opacity: 0;
+}
+
+.header__language:hover .header__switch-link--RU {
   left: 30px;
-  /* opacity: 1; */
-  /* transition: left 10s opacity 10s; */
 }
 
-/* @keyframes ruLang {
-  from {
-    left: 0;
-    opacity: 0;
-  }
-
-  to {
-    left: 35px;
-    opacity: 1;
-  }
-} */
-
-
-.intro__switch-link--UA {
-  /* transition: animation 6s; */
-  opacity: 0;
-  /* transition: left 5s; */
-  /* transition: left 10s, opacity 10s; */
-  /* transition: left 10s, opacity 10s; */
-}
-
-/* .testHover {
-  transition: left 10s, opacity 10s;
-} */
-
-/* .testHover {
-  transition: none;
-} */
-
-.testTransition {
-  transition: left 10s, opacity 10s;
-}
-
-.intro__language:hover .intro__switch-link--UA {
-  /* animation: uaLang 3s forwards linear; */
+.header__language:hover .header__switch-link--UA {
   left: 75px;
-  /* opacity: 1; */
-  /* transition: left 5s; */
 }
 
-
-/* @keyframes uaLang {
-  from {
-    left: 0;
-    opacity: 0;
-  }
-
-  to {
-    left: 75px;
-    opacity: 1;
-  }
-} */
-
-
-
-.intro__logo {
-  /* display: inline-block; */
-  /* position: absolute;
-  left: 50%;
-  top: 24px;
-  transform: translate(-50%, 0); */
-  /* animation: pageLoaded 5s forwards linear; */
-  /* 5s infinite linear */
+.logo {
   height: auto;
 }
 
-.intro__logo svg {
+.logo svg {
   /* fill: transparent; */
   animation: pageLoaded 5s forwards linear;
   /* transition: fill 0.3s; */
@@ -272,32 +137,30 @@ body {
   }
 }
 
-.intro__logo img {
+.logo svg {
   width: 100%;
   height: 26px;
 }
 
 @media (min-width: 768px) {
-  .intro__logo img {
+  .logo svg {
     height: 38px;
   }
 }
 
 @media (min-width: 1024px) {
-  .intro__logo img {
+  .logo svg {
     height: 100%;
   }
 }
 
-
-
-.intro__hamburger {
+.hamburger-menu {
   visibility: visible;
   /* cursor: pointer; */
 }
 
 @media (min-width: 768px) {
-  .intro__hamburger {
+  .hamburger-menu {
     visibility: hidden;
   }
 }
@@ -379,7 +242,6 @@ body {
 
 .intro__horizontal-link {
   display: none;
-
 }
 
 @media (min-width: 768px) {
@@ -396,14 +258,13 @@ body {
     text-decoration: none;
 
     color: #373737;
-    transition: color 0.3s;
 
+    transition: color 0.3s;
   }
 }
 
 @media (min-width: 1440px) {
   .intro__horizontal-link {
-
     font-size: 16px;
 
   }
@@ -411,10 +272,12 @@ body {
 
 .intro__horizontal-link::after {
   content: '';
+  display: block;
   width: 0px;
   height: 1px;
+
   background-color: white;
-  display: block;
+
   transition: width 0.3s;
 }
 
@@ -423,6 +286,7 @@ body {
   content: '';
   width: 100%;
   height: 1px;
+
   background-color: white;
 }
 
@@ -431,50 +295,44 @@ body {
 }
 
 .intro__horizontal-link--left {
-  /* left: 0; */
   left: -24px;
-
 
   transform: rotate(-90deg) translateX(50%);
 }
 
 .intro__horizontal-link--right {
-  /* right: 0; */
   right: -24px;
 
   transform: rotate(90deg) translateX(-50%);
 }
 
 .intro__vertical-link {
+  position: absolute;
+  bottom: 24px;
+
   display: none;
+  margin-left: 50%;
+
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+
+
+  color: #373737;
+
+  transform: translateX(-50%);
+
+  text-decoration: none;
 }
 
 @media (min-width: 768px) {
   .intro__vertical-link {
-    position: absolute;
-    bottom: 24px;
-    /* display: inline-block; */
     display: block;
-    margin-left: 50%;
-    /* width: 100%; */
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 1.4;
-
-    /* text-align: center; */
-
-    color: #373737;
-
-    transform: translateX(-50%);
-
-    text-decoration: none;
-
   }
 }
 
 @media (min-width: 1440px) {
   .intro__vertical-link {
-
     font-size: 16px;
 
   }
@@ -482,18 +340,21 @@ body {
 
 .intro__vertical-link::after {
   content: '';
+
+  display: block;
   width: 0px;
   height: 1px;
+
   background-color: white;
-  display: block;
+
   transition: width 0.3s;
 }
 
 .intro__vertical-link:hover::after{
   content: '';
+
   width: 100%;
   height: 1px;
-  background-color: white;
 }
 
 .intro__vertical-link:hover {
@@ -506,8 +367,8 @@ body {
   /* transform: rotate(-51deg);
     top: -450px; */
 
-    transform: rotate(-52deg);
-    top: -59vw;
+  transform: rotate(-52deg);
+  top: -59vw;
 
 
   white-space: nowrap;
@@ -517,43 +378,34 @@ body {
 
 @media (min-width: 768px) {
   .intro__running-text {
-
-    transform: rotate(-43deg);
     /* top: -420px; */
     top: -37vw;
-
-
+    transform: rotate(-43deg);
   }
 }
 
 @media (min-width: 1024px) {
   .intro__running-text {
-
+    top: -30vw;
     transform: rotate(-35deg);
     /* top: -410px; */
-    top: -30vw;
-
-
-
   }
 }
 
 @media (min-width: 1440px) {
   .intro__running-text {
-
+    top: -30vw;
     transform: rotate(-33deg);
     /* top: -415px; */
-    top: -30vw;
-
   }
 }
 
-
 .intro__text {
   margin: 0;
+
   font-style: italic;
-  font-weight: 700;
   font-size: 28px;
+  font-weight: 700;
   line-height: 1.1;
 
   text-align: center;
@@ -584,9 +436,6 @@ body {
 }
 
 .intro__text--right {
-  /* margin-bottom: 16px; */
-  /* padding-left: 100%; */
-  /* padding-left: 4000px; */
   animation: runningTextUp 4s infinite linear;
 }
 
@@ -628,36 +477,31 @@ body {
   }
 }
 
-  @keyframes runningTextUp {
-    from {
-      /* transform: translate(0,0); */
-      transform: translate(-200%,0);
-    }
-
-    to {
-      transform: translate(200%, 0) ;
-      /* не выезжяет плавно а сразу появляется */
-      /* transform: translate(-360%, 0) rotate(180deg); */
-    }
+@keyframes runningTextUp {
+  from {
+    /* transform: translate(0,0); */
+    transform: translate(-200%,0);
   }
 
+  to {
+    transform: translate(200%, 0) ;
+    /* не выезжяет плавно а сразу появляется */
+    /* transform: translate(-360%, 0) rotate(180deg); */
+  }
+}
 
-.superSpiner {
+
+.spiner {
   position: absolute;
   height: 90px;
   bottom: -20px;
   right: 40px;
   transform: rotate(-90deg);
-  /* transition: animation 3s; */
-  /* transition: transform 3s; */
 }
 
-/* .superSpiner:hover {
-  animation: spin 5s infinite linear;
-} */
 
 @media (min-width: 768px) {
-  .superSpiner {
+  .spiner {
     bottom: 24px;
     right: 24px;
     height: 112px;
@@ -665,46 +509,34 @@ body {
 }
 
 @media (min-width: 1440px) {
-  .superSpiner {
+  .spiner {
     height: 118px;
   }
 }
 
-.superSpiner svg {
-  /* position: absolute; */
-  fill: currentColor;
+.spiner svg {
   height: auto;
-  max-width: 66vmin;
-  transform-origin: center;
-  /* width: 66%; */
-  /* position: absolute; */
   width: 90px;
-  /* transform: rotate(-90deg); */
-  /* у меня стартовое положение не такое как надо и тут ротетйт это фиксит но из за транзишена оно крутится после перезагрузки страницы */
-  /* transition: transform 3s; */
-  color: white;
-  /* transition: animation 3s; */
+
+  font-size: 9px;
+  fill: white;
 }
 
 @media (min-width: 768px) {
-  .superSpiner svg {
+  .spiner svg {
     width: 112px;
   }
 }
 
 @media (min-width: 1440px) {
-  .superSpiner svg {
+  .spiner svg {
     width: 118px;
   }
 }
 
-.superSpiner:hover svg{
-  /* animation: spin 5s infinite linear; */
-  /* transition: transform 3s; */
-}
-
-.superSpiner::after {
+.spiner::after {
   content: '';
+
   position: absolute;
   top: 50%;
   left: 50%;
@@ -718,18 +550,6 @@ body {
   transform: translate(-50%, -50%);
 }
 
-/* .intro__spiner {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-
-  width: 8px;
-  height: 8px;
-
-  background-color: black;
-
-  border-radius: 50%;
-} */
 
 @keyframes spin {
   from {
@@ -740,72 +560,3 @@ body {
     transform: rotate(-360deg);
   }
 }
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  column-gap: 16px;
-}
-
-/* @media (min-width: 768px) {
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    column-gap: 32px;
-  }
-} */
-
-.grid__item--1-2 {
-  grid-column: 1 / 2;
-}
-
-.grid__item--1-6 {
-  grid-column: 1 / 7;
-}
-
-
-.grid__item--1-7 {
-  grid-column: 1 / 8;
-}
-
-.grid__item--7-8 {
-  grid-column: 7 / 8;
-}
-
-.grid__item--7-12 {
-  grid-column: 7 / 13;
-}
-
-.grid__item--8-12 {
-  grid-column: 8 / 13;
-}
-
-.grid__item--1-12 {
-  grid-column: 1 / 13;
-}
-
-
-.block{
-    height: 90px;
-    width:300px;
-    margin:0 auto;
-    background: #343436;
-  }
-  .block p{
-    text-align:center;
-    color:#fff;
-    text-transform: uppercase;
-    padding-top: 35px;
-    animation: text 5s infinite linear;
-    padding-left: 100%;
-    white-space: nowrap;
-  }
-  @keyframes text {
-    0%{
-      transform: translate(0, 0);
-    }
-
-    100%{
-      transform: translate(-160%, 0);
-    }
-  }
