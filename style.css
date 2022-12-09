@@ -1,30 +1,20 @@
-@import url('./src/fonts/stylesheet.css');
+@import url("./src/fonts/stylesheet.css");
+@import url("./src/styles/header.css");
+@import url("./src/styles/spiner.css");
+@import url("./src/styles/section.css");
+@import url("./src/styles/container.css");
+@import url("./src/styles/logo.css");
+@import url("./src/styles/hamburger-menu.css");
 
 * {
   box-sizing: border-box;
 }
+
 body {
   margin: 0;
-  font-family: 'Grtsk Giga';
+  font-family: "Grtsk Giga";
   font-weight: 600;
   overflow: hidden;
-
-}
-
-.section {
-  background-color: #BEBEBE;
-}
-
-.container {
-  margin: 0 auto;
-  padding: 0 16px;
-  max-width: 1440px;
-}
-
-@media (min-width: 768px) {
-  .container {
-    padding: 0 24px;
-  }
 }
 
 .intro {
@@ -44,145 +34,21 @@ body {
   }
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header__language {
-  position: relative;
-  width: 34px;
-  height: 34px;
-}
-
-@media (min-width: 1024px) {
-  .header__language {
-    width: 38px;
-    height: 38px;
-  }
-}
-
-.header__language img {
-  width: 34px;
-  height: 34px;
-}
-
-
-@media (min-width: 1024px) {
-  .header__language img {
-    width: 38px;
-    height: 38px;
-  }
-}
-
-.header__switch-link {
-  position: absolute;
-  left: 0;
-  text-decoration: none;
-  padding: 10px;
-  font-size: 14px;
-  color: #373737;
-  /* z-index: -10; */
-}
-
-@media (min-width: 768px) {
-  .header__switch-link {
-    font-size: 16px;
-  }
-}
-
-.header__switch-link--RU {
-  opacity: 0;
-}
-
-.header__switch-link--UA {
-  opacity: 0;
-}
-
-.header__language:hover .header__switch-link--RU {
-  left: 30px;
-}
-
-.header__language:hover .header__switch-link--UA {
-  left: 75px;
-}
-
-.logo {
-  height: auto;
-}
-
-.logo svg {
-  /* fill: transparent; */
-  animation: pageLoaded 5s forwards linear;
-  /* transition: fill 0.3s; */
-  stroke: black;
-  /* background: linear-gradient(0deg, green, red) */
-  /* background-color:red; */
-  transition: all 0.3s;
-}
-
-@keyframes pageLoaded {
-  from{
-    fill: transparent;
-    /* background: linear-gradient(0deg, black 1%, white 99%) */
-  }
-
-  to {
-    fill: black;
-    /* background: linear-gradient(0deg, black 100%, white 0%) */
-    /* строк нормально не убирается то есстьон убирается раньше чем заполнится все черным*/
-    /* stroke: none; */
-    stroke: transparent;
-  }
-}
-
-.logo svg {
-  width: 100%;
-  height: 26px;
-}
-
-@media (min-width: 768px) {
-  .logo svg {
-    height: 38px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .logo svg {
-    height: 100%;
-  }
-}
-
-.hamburger-menu {
-  visibility: visible;
-  /* cursor: pointer; */
-}
-
-@media (min-width: 768px) {
-  .hamburger-menu {
-    visibility: hidden;
-  }
-}
-
 .intro__front {
   position: relative;
-  /* margin-top: 72px; */
-
-  text-align: center;
 }
 
 .intro__img {
   position: relative;
   z-index: 1;
-  width: fit-content;
+
   margin: 0 auto;
+  width: fit-content;
 }
 
 .intro__img img {
   filter: blur(38px);
   height: 294px;
-
 }
 
 @media (min-width: 768px) {
@@ -199,16 +65,11 @@ body {
 
 .intro__title {
   position: absolute;
-  /* top: 50%; */
   top: 35%;
   z-index: 2;
 
-  /* пришлось это закоментить и топ поменять чтобы  стили из джс не конфликтовали */
-  /* transform: translate(0, -50%); */
-
   width: 100%;
   margin: 0;
-  /* font-size: 82px; */
   font-size: 34px;
   font-weight: 700;
   line-height: 1.1;
@@ -229,7 +90,6 @@ body {
 
 @media (min-width: 1024px) {
   .intro__title {
-    /* font-size: 82px; */
     font-size: calc(28px + 3vw);
   }
 }
@@ -266,12 +126,11 @@ body {
 @media (min-width: 1440px) {
   .intro__horizontal-link {
     font-size: 16px;
-
   }
 }
 
 .intro__horizontal-link::after {
-  content: '';
+  content: "";
   display: block;
   width: 0px;
   height: 1px;
@@ -281,9 +140,8 @@ body {
   transition: width 0.3s;
 }
 
-
-.intro__horizontal-link:hover::after{
-  content: '';
+.intro__horizontal-link:hover::after {
+  content: "";
   width: 100%;
   height: 1px;
 
@@ -317,7 +175,6 @@ body {
   font-weight: 600;
   line-height: 1.4;
 
-
   color: #373737;
 
   transform: translateX(-50%);
@@ -334,12 +191,11 @@ body {
 @media (min-width: 1440px) {
   .intro__vertical-link {
     font-size: 16px;
-
   }
 }
 
 .intro__vertical-link::after {
-  content: '';
+  content: "";
 
   display: block;
   width: 0px;
@@ -350,8 +206,8 @@ body {
   transition: width 0.3s;
 }
 
-.intro__vertical-link:hover::after{
-  content: '';
+.intro__vertical-link:hover::after {
+  content: "";
 
   width: 100%;
   height: 1px;
@@ -362,41 +218,32 @@ body {
 }
 
 .intro__running-text {
-  /* position: absolute; */
   position: relative;
-  /* transform: rotate(-51deg);
-    top: -450px; */
 
-  transform: rotate(-52deg);
-  top: -59vw;
-
+  top: -117vw;
+  transform: rotate(-69deg);
 
   white-space: nowrap;
-  /* тут тоже текст не двигается */
-  /* width: max-content; */
 }
 
 @media (min-width: 768px) {
   .intro__running-text {
-    /* top: -420px; */
-    top: -37vw;
-    transform: rotate(-43deg);
+    top: -50vw;
+    transform: rotate(-52deg);
   }
 }
 
 @media (min-width: 1024px) {
   .intro__running-text {
-    top: -30vw;
-    transform: rotate(-35deg);
-    /* top: -410px; */
+    top: -37vw;
+    transform: rotate(-42deg);
   }
 }
 
 @media (min-width: 1440px) {
   .intro__running-text {
-    top: -30vw;
+    top: -26vw;
     transform: rotate(-33deg);
-    /* top: -415px; */
   }
 }
 
@@ -413,14 +260,11 @@ body {
 
   opacity: 0.1;
 
-  /* border: 1px solid #373737; */
-  /* transform: rotate(-30deg); */
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 3px #373737;
+  -webkit-text-stroke: 1px #373737;
   color: transparent;
 
   white-space: nowrap;
-
 }
 
 @media (min-width: 768px) {
@@ -440,15 +284,8 @@ body {
 }
 
 .intro__text--left {
-  /* бред оно при изменении текста словается  */
-  /* padding-right: 4000px; */
-  /* margin-bottom: 16px; */
-  /* margin-top: 16px; */
   transform: rotate(180deg) translateX(-30%);
   animation: runningTextDown 4s infinite linear;
-  /* animation: runningTextDown 3s linear 1s infinite running; */
-  /* backwards */
-  /* animation-fill-mode: backwards; */
 }
 
 @media (min-width: 768px) {
@@ -465,98 +302,20 @@ body {
 
 @keyframes runningTextDown {
   from {
-    /* transform: translate(0,0) rotate(180deg); */
-    transform: translate(200%,0) rotate(180deg);
+    transform: translate(200%, 0) rotate(180deg);
   }
 
   to {
-    /* transform: translate(-160%, 0) rotate(180deg); */
     transform: translate(-200%, 0) rotate(180deg);
-    /* не выезжяет плавно а сразу появляется */
-    /* transform: translate(-360%, 0) rotate(180deg); */
   }
 }
 
 @keyframes runningTextUp {
   from {
-    /* transform: translate(0,0); */
-    transform: translate(-200%,0);
+    transform: translate(-200%, 0);
   }
 
   to {
-    transform: translate(200%, 0) ;
-    /* не выезжяет плавно а сразу появляется */
-    /* transform: translate(-360%, 0) rotate(180deg); */
-  }
-}
-
-
-.spiner {
-  position: absolute;
-  height: 90px;
-  bottom: -20px;
-  right: 40px;
-  transform: rotate(-90deg);
-}
-
-
-@media (min-width: 768px) {
-  .spiner {
-    bottom: 24px;
-    right: 24px;
-    height: 112px;
-  }
-}
-
-@media (min-width: 1440px) {
-  .spiner {
-    height: 118px;
-  }
-}
-
-.spiner svg {
-  height: auto;
-  width: 90px;
-
-  font-size: 9px;
-  fill: white;
-}
-
-@media (min-width: 768px) {
-  .spiner svg {
-    width: 112px;
-  }
-}
-
-@media (min-width: 1440px) {
-  .spiner svg {
-    width: 118px;
-  }
-}
-
-.spiner::after {
-  content: '';
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-
-  width: 8px;
-  height: 8px;
-
-  background-color: black;
-
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-}
-
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(-360deg);
+    transform: translate(200%, 0);
   }
 }
