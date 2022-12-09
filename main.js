@@ -66,14 +66,20 @@ spiner.addEventListener('mouseout', (event) => {
 });
 
 
+// хотел отслеживать последнее изменение и если оно прыгент внезапно на 5 пунктов то оставить его таким как и было
+// этим я хотел предотвратит прыжки на спинере и бегущем тексте 
+let testx = 0;
+let testy = 0;
 // это оно
 (function () {
 
   const container = document.querySelector('main');
+  // const container = document.querySelector('.intro__front');
 
   const animateit = function (e) {
         const title = document.querySelector('.intro__title');
         // console.log(e);
+        // значения мышки
         const { offsetX: x, offsetY: y } = e
         // это значения мысоты и ширины main
         const { offsetWidth: width, offsetHeight: height } = this;
@@ -81,16 +87,35 @@ spiner.addEventListener('mouseout', (event) => {
         let move = 25;
         let xMove = x / width * (move * 2) - move;
         let yMove = y / height * (move * 2) - move;
-        console.log(width,  height);
-        // move = 25,
-        // let xMove = x / width * (5 * 2) - 5;
-        // let yMove = y / height * (5 * 2) - 5;
+        // testx = x;
+        // testy = y;
+        // console.log(width,  height , x,y, testx, testy);
+        // console.log(width,  height , x,y);
+
+        console.log(xMove , yMove)
+        // хотел отследить резкии рывки и просто их игнорить не получилось
+        // if (xMove < -10  || yMove < -10 ) {
+        //   console.log('gg')
+        // }
+
+        // if ( yMove < -20 ) {
+        //   console.log('y broken')
+        //   return
+        // }
+
+        // if ( xMove < -20 ) {
+        //   console.log('x broken')
+        //   return
+        // }
 
         title.style.transform = `translate(${xMove}px, ${yMove}px)`;
+        // title.style.left = `${xMove}px`;
+        // title.style.top = `${yMove}px`;
 
-        // if (e.type === 'mouseleave') {
-        //   title.style.transform = '';
-        // }
+
+        if (e.type === 'mouseleave') {
+          title.style.transform = '';
+        }
   };
 
   container.addEventListener('mousemove', animateit);

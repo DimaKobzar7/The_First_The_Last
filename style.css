@@ -242,9 +242,34 @@ body {
   left: 50%;
   top: 24px;
   transform: translate(-50%, 0); */
-  animation: pageLoaded 5s forwards linear;
+  /* animation: pageLoaded 5s forwards linear; */
   /* 5s infinite linear */
   height: auto;
+}
+
+.intro__logo svg {
+  /* fill: transparent; */
+  animation: pageLoaded 5s forwards linear;
+  /* transition: fill 0.3s; */
+  stroke: black;
+  /* background: linear-gradient(0deg, green, red) */
+  /* background-color:red; */
+  transition: all 0.3s;
+}
+
+@keyframes pageLoaded {
+  from{
+    fill: transparent;
+    /* background: linear-gradient(0deg, black 1%, white 99%) */
+  }
+
+  to {
+    fill: black;
+    /* background: linear-gradient(0deg, black 100%, white 0%) */
+    /* строк нормально не убирается то есстьон убирается раньше чем заполнится все черным*/
+    /* stroke: none; */
+    stroke: transparent;
+  }
 }
 
 .intro__logo img {
@@ -264,15 +289,7 @@ body {
   }
 }
 
-@keyframes pageLoaded {
-    from{
 
-    }
-
-    to {
-
-    }
-}
 
 .intro__hamburger {
   visibility: visible;
@@ -319,10 +336,12 @@ body {
 
 .intro__title {
   position: absolute;
-  top: 50%;
+  /* top: 50%; */
+  top: 35%;
   z-index: 2;
 
-  transform: translate(0, -50%);
+  /* пришлось это закоментить и топ поменять чтобы  стили из джс не конфликтовали */
+  /* transform: translate(0, -50%); */
 
   width: 100%;
   margin: 0;
@@ -484,17 +503,13 @@ body {
 .intro__running-text {
   /* position: absolute; */
   position: relative;
-  transform: rotate(-51deg);
-    top: -450px;
-  /* transform: rotate(-30deg);
-  top: -600px; */
-  /* top: -650px; */
-  /* left: -385px; */
-  /* transform: translateY(-50%); */
-  /* transform: translate(-20%, -50%) rotate(-30deg); */
-  /* transform: translate(-20%, -190%) rotate(-30deg); */
+  /* transform: rotate(-51deg);
+    top: -450px; */
 
-  /* ноу врап не подходит так как тогда текст не двигается вместо с уженим экрана */
+    transform: rotate(-52deg);
+    top: -59vw;
+
+
   white-space: nowrap;
   /* тут тоже текст не двигается */
   /* width: max-content; */
@@ -504,7 +519,8 @@ body {
   .intro__running-text {
 
     transform: rotate(-43deg);
-    top: -420px;
+    /* top: -420px; */
+    top: -37vw;
 
 
   }
@@ -513,8 +529,9 @@ body {
 @media (min-width: 1024px) {
   .intro__running-text {
 
-    transform: rotate(-42deg);
-    top: -410px;
+    transform: rotate(-35deg);
+    /* top: -410px; */
+    top: -30vw;
 
 
 
@@ -525,7 +542,8 @@ body {
   .intro__running-text {
 
     transform: rotate(-33deg);
-    top: -415px;
+    /* top: -415px; */
+    top: -30vw;
 
   }
 }
